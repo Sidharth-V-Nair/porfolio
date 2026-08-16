@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #080706;
+  --bg-elevated: #11100e;
+  --crimson: #6a111b;
+  --crimson-bright: #d41f32;
+  --crimson-glow: #9a1726;
+  --ash: #a69e92;
+  --paper: #f2ede6;
+  --line: #261f1b;
+  --line-soft: #1a1512;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-crimson: var(--crimson);
+  --color-crimson-bright: var(--crimson-bright);
+  --color-crimson-glow: var(--crimson-glow);
+  --color-ash: var(--ash);
+  --color-paper: var(--paper);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+
+  --font-display: "Etna", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) var(--bg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  background:
+    radial-gradient(
+      ellipse 75% 50% at 75% 15%,
+      rgba(106, 17, 27, 0.42),
+      transparent 60%
+    ),
+    var(--bg);
+  color: var(--paper);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+  font-optical-sizing: auto;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+.hero-portrait {
+  object-position: center 12%;
+}
+
+.portrait-mask {
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, black 10%, black 100%),
+    linear-gradient(to bottom, black 76%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, black 10%, black 100%),
+    linear-gradient(to bottom, black 76%, transparent 100%);
+  mask-composite: intersect;
+}
+
+::selection {
+  background: var(--crimson-bright);
+  color: var(--bg);
+}
+@font-face {
+  font-family: "Etna";
+  src: url("/fonts/Etna-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Etna";
+  src: url("/fonts/Etna-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Etna";
+  src: url("/fonts/Etna-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
