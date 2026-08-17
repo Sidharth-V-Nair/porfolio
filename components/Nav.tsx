@@ -1,12 +1,11 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import Timecode from "./Timecode";
 import { profile } from "@/lib/content";
 
 const links = [
-  { label: "Work", href: "#work" },
+  { label: "Home", href: "#top" },
   { label: "About", href: "#about" },
+  { label: "Projects", href: "#work" },
   { label: "Tools", href: "#tools" },
   { label: "Contact", href: "#contact" },
 ];
@@ -48,8 +47,6 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-
-        <Timecode className="hidden text-[11px] tracking-wider text-ash/90 sm:block" />
       </nav>
     </header>
   );

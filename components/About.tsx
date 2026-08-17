@@ -13,7 +13,7 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative order-2 aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-line bg-bg shadow-[0_30px_80px_rgba(0,0,0,0.35)] md:order-1"
+          className="relative order-2 aspect-[5/5] w-full overflow-hidden rounded-[2rem] border border-line bg-bg shadow-[0_30px_80px_rgba(0,0,0,0.35)] md:order-1"
         >
           <Image
             src="/images/action-shot.jpg"
@@ -24,9 +24,9 @@ export default function About() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-bg/20 via-transparent to-transparent" />
           <div className="absolute inset-0 ring-1 ring-inset ring-crimson/20" />
-          <span className="absolute bottom-3 left-3 font-mono text-[10px] tracking-[0.2em] text-paper/80">
+          {/* <span className="absolute bottom-3 left-3 font-mono text-[10px] tracking-[0.2em] text-paper/80">
             ON SET
-          </span>
+          </span> */}
         </motion.div>
 
         <motion.div

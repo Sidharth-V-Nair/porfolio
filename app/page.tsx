@@ -4,6 +4,8 @@ import About from "@/components/About";
 import Work from "@/components/Work";
 import Tools from "@/components/Tools";
 import Contact from "@/components/Contact";
+import Journey from "@/components/Journey";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -14,7 +16,9 @@ export default function Home() {
         <Hero />
         <About />
         <Work />
+        <Journey />
         <Tools />
+        <ContactForm />
         <Contact />
       </main>
     </>

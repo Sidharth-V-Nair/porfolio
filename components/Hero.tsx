@@ -2,7 +2,15 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Video, Wand2, PenTool, Bot } from "lucide-react";
 import { profile } from "@/lib/content";
+
+const skills = [
+  { icon: Video, label: "Video Editor" },
+  { icon: Wand2, label: "Motion Graphics Designer" },
+  { icon: PenTool, label: "Graphic Designer" },
+  { icon: Bot, label: "AI Content Creator" },
+];
 
 export default function Hero() {
   return (
@@ -32,16 +40,6 @@ export default function Hero() {
 
       {/* Text column */}
       <div className="relative z-10 flex flex-col justify-between px-6 pb-16 pt-28 md:px-10 md:pb-20 lg:pt-40">
-        {/* Meta */}
-        <div className="space-y-1.5">
-          <p className="font-mono text-[10px] tracking-[0.32em] text-ash/80">
-            {profile.reelYearsActive.toUpperCase()}
-          </p>
-          <p className="font-mono text-[10px] tracking-[0.32em] text-ash/80">
-            {profile.location.toUpperCase()}
-          </p>
-        </div>
-
         {/* Main content */}
         <div className="mt-16 lg:mt-0">
           <motion.p
@@ -51,29 +49,58 @@ export default function Hero() {
             className="mb-6 inline-flex items-center gap-3 font-mono text-[10px] tracking-[0.3em] text-crimson-bright"
           >
             <span className="h-px w-8 bg-crimson-bright/80" />
-            {profile.role.toUpperCase()}
+            CREATIVE VISION. POWERFUL IMPACT.
           </motion.p>
 
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.95,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="font-display text-[clamp(3.6rem,9vw,7.2rem)] font-medium leading-[0.9] tracking-[-0.015em] text-paper"
           >
-            {profile.name}
+            Sidharth V Nair{" "}
           </motion.h1>
+
+          {/* Skills / badges */}
+          <motion.ul
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.1,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="mt-8 flex flex-col gap-3"
+          >
+            {skills.map(({ icon: Icon, label }) => (
+              <li
+                key={label}
+                className="flex items-center gap-3 font-serif font-medium text-[11px] tracking-[0.15em] text-ash"
+              >
+                <span className="flex h-6 w-6 items-center justify-center rounded-full border border-crimson-bright/50 text-crimson-bright">
+                  <Icon size={13} strokeWidth={2} />
+                </span>
+                {label.toUpperCase()}
+              </li>
+            ))}
+          </motion.ul>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.8,
-              delay: 0.15,
+              delay: 0.2,
               ease: [0.22, 1, 0.36, 1],
             }}
             className="mt-8 max-w-[21rem] text-[15px] leading-[1.7] text-ash md:text-[16px]"
           >
-            {profile.tagline}
+            Crafting high-impact visual content that{" "}
+            <span className="text-crimson-bright">connects, inspires,</span> and
+            delivers results.
           </motion.p>
 
           <motion.div
@@ -84,13 +111,25 @@ export default function Hero() {
               delay: 0.3,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="mt-12"
+            className="mt-12 flex flex-wrap items-center gap-4"
           >
             <a
               href="#work"
+              className="group relative inline-flex items-center gap-3 bg-crimson-bright px-7 py-3.5 font-mono text-[11px] tracking-[0.22em] text-bg transition-all duration-400 hover:opacity-90"
+            >
+              VIEW PROJECTS
+              <span className="transition-transform duration-300 group-hover:translate-x-1.5">
+                →
+              </span>
+            </a>
+
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 border border-line-soft px-7 py-3.5 font-mono text-[11px] tracking-[0.22em] text-paper transition-all duration-400 hover:border-crimson-bright hover:text-crimson-bright"
             >
-              VIEW THE REEL
+              RESUME
               <span className="transition-transform duration-300 group-hover:translate-x-1.5">
                 →
               </span>
