@@ -31,10 +31,10 @@ export const socials = [
 export const about = {
   heading: "Behind every cut, a decision.",
   paragraphs: [
-   "I’m a Video Editor & Motion Graphics Designer focused on turning raw footage into engaging visual stories. I work across social media content, brand films, promotional videos, and motion-driven content, combining sharp editing, strong visual rhythm, and purposeful design",
+   "I’m a Video Editor & Motion Graphics Designer focused on turning raw footage into engaging visual stories. I work across social media content, brand films, promotional videos, and motion-driven content, combining sharp editing, strong visual rhythm, and purposefull design.",
 "My approach goes beyond simply cutting footage. I focus on storytelling, pacing, transitions, sound, color, typography, and motion to make every frame feel intentional and keep the audience engaged.",
 
-"From the first rough cut to the final polished frame, I bring creativity and attention to detail into every project. The tools may change, but the goal stays the same — creating visuals that communicate, connect, and leave an impact."
+"From the first rough cut to the final polished frame, I bring creativity and attention to detail into every project. The tools may change, but the goal stays the same creating visuals that communicate, connect, and leave an impact."
   ],
   stats: [
     { value: "60+", label: "Projects cut" },
