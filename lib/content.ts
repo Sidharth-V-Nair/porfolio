@@ -77,14 +77,11 @@ export const projects: Project[] = [
     cover: "/images/action-shot.jpg",
   },
 ];
-
 export const tools = [
-  "Premiere Pro",
-  "After Effects",
-  "DaVinci Resolve",
-  "Cinema 4D",
-  "Photoshop",
-  "Lightroom",
-  "Audition",
-  "Blender",
+  { name: "Premiere Pro", slug: "adobepremierepro", color: "#9999FF" },
+  { name: "After Effects", slug: "adobeaftereffects", color: "#9999FF" },
+  { name: "DaVinci Resolve", slug: "davinciresolve", color: "#233A51" },
+  { name: "Blender", slug: "blender", color: "#E87D0D" },
+  { name: "Photoshop", slug: "adobephotoshop", color: "#31A8FF" },
+  { name: "Illustrator", slug: "adobeillustrator", color: "#FF9A00" },
 ];
