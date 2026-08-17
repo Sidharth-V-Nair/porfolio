@@ -11,7 +11,7 @@ const skills = [
   { icon: PenTool, label: "Graphic Designer" },
   { icon: Bot, label: "AI Content Creator" },
 ];
-
+//hai
 export default function Hero() {
   return (
     <section
